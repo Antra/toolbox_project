@@ -5,3 +5,4 @@ These are my notes from building a sample toolbox; so that it can easily be inst
 - Fill out the `setup.cfg` and `setup.py` files
 - Run `python setup.py sdist` to create the local files
 - Alternatively simply push the project to Github and install it with `python -m pip install https://github.com/Antra/toolbox_project/tarball/master#egg=sample_toolbox`
+  - and via requirements.txt file: `-e git+git://github.com/Antra/toolbox_project#egg=sample_toolbox`
