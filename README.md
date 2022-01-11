@@ -5,9 +5,9 @@ These are my notes from building a sample toolbox; so that it can easily be inst
 - Fill out the `setup.cfg` and `setup.py` files
 - Run `python setup.py sdist` to create the local files
 - Alternatively simply push the project to Github and install it with `python -m pip install https://github.com/Antra/toolbox_project/tarball/master#egg=sample_toolbox`
-  - and via requirements.txt file: `-e git+git://github.com/Antra/toolbox_project#egg=sample_toolbox`
-- If the project is not in a separate repo, but part of e.g. `Playground` repo, then install it using the [subdirectory parameter](https://pip.pypa.io/en/latest/cli/pip_install/) with `python -m pip install -e "git+https://github.com/antra/playground.git#egg=sample_toolbox&subdirectory=toolbox_project"`
-  - and via requirements.txt file: `-e "git+https://github.com/antra/playground.git#egg=sample_toolbox&subdirectory=toolbox_project"`
+  - and via requirements.txt file: `git+https://github.com/Antra/toolbox_project#egg=sample_toolbox`
+- If the project is not in a separate repo, but part of e.g. `Playground` repo, then install it using the [subdirectory parameter](https://pip.pypa.io/en/latest/cli/pip_install/) with `python -m pip install "git+https://github.com/antra/playground.git#egg=sample_toolbox&subdirectory=toolbox_project"`
+  - and via requirements.txt file: `"git+https://github.com/antra/playground.git#egg=sample_toolbox&subdirectory=toolbox_project"`
 
 
 # Complex toolchain
@@ -36,10 +36,10 @@ I.e.
 
 When the above structure is observed, the individual tools can be installed by (in this case `module1`):
 ```
-pip install -e "git+https://github.com/Antra/toolbox_project.git#egg=module1&subdirectory=toolchain/module1"
+python -m pip install "git+https://github.com/Antra/toolbox_project.git#egg=module1&subdirectory=toolchain/module1"
 ```
 
 Or have it in the requirements file (in this case `module1`):
 ```
--e "git+https://github.com/Antra/toolbox_project.git#egg=module1&subdirectory=toolchain/module1"
+"git+https://github.com/Antra/toolbox_project.git#egg=module1&subdirectory=toolchain/module1"
 ```
